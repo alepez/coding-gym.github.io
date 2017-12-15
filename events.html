@@ -22,7 +22,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
-		
+	<link href="css/events.css" rel="stylesheet">
+	
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="img/favicon.ico" />
 	
@@ -33,7 +34,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-		<a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img\coding-gym-white.png" href="#page-top" width="100"></img></a>
+		<a class="navbar-brand js-scroll-trigger" href="index.html"><img src="img\coding-gym-white.png" href="index.html" width="100"></img></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -41,185 +42,105 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#events">Incoming Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#how-it-works">How It Works</a>
-            </li> 
+              <a class="nav-link js-scroll-trigger" href="#events">Previous Events</a>
+            </li>           
 			<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Subscribe</a>
-            </li>                     
+            </li> 
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Header -->
-    <header class="masthead">
+    <header class="eventshead">
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Coding Gym</div>
-          <div class="intro-heading text-uppercase">Improve your skills</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">Tell Me More</a>
+          <div class="intro-heading text-uppercase">Events Directory</div>         
         </div>
       </div>
     </header>
 
-    <!-- Services -->
-    <section id="about">
+    <!-- Events -->
+    <section id="events">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
+            <h2 class="section-heading text-uppercase">Previous events</h2>
             <h3 class="section-subheading text-muted"></h3>
           </div>
         </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Meet people</h4>
-            <p class="text-muted">Choose your partner.<br/>Sit side by side.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Pick your language</h4>
-            <p class="text-muted">Open to every programming language.<br/>Computers are provided by us.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Solve challenges</h4>
-            <p class="text-muted">Face 3 self-contained problems.<br/>Find solutions, discuss compromises.</p>
-          </div>		
-	  </div>
-      </div>
-	  
-    </section>
+        <div class="row">
+          
+		<div class="container">
+		<div class="row">							
+			<div class="[ col-lg-12 col-xs-12 col-sm-12 ]">
+				<ul class="event-list">
+					<h4 class="section-heading text-uppercase text-center">2017</h4>
+					<br/>
+					<li>
+						<time datetime="2017-11-20">
+							<span class="day">22</span>
+							<span class="month">Nov</span>
+							<span class="year">2017</span>
+							<span class="time">9 PM</span>
+						</time>
+						<div class="info">
+							<h2 class="title"><span class="fa fa-map-marker"></span> MakeIt Modena</h2>
+							<p title="Host" class="desc"><span class="fa fa-home"></span> ConoscereLinux</p>							
+							<ul>
+								<li style="width:20%;" class="text-left"><span class="fa fa-clock-o"></span> 9-11 PM</li>
+								<li style="width:40%;"><a href="https://www.hackerrank.com/modena-coding-nov-2017"><span class="fa fa-globe"></span> Website</a></li>
+								<li style="width:40%;"><span class="fa fa-user"></span> 15 Attendees</li>
+							</ul>
+						</div>
+					</li>
 
-    <!-- Portfolio Grid -->
-    	
-	<section class="bg-light" id="events">
-      <div class="container">       
-		<div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Incoming Events</h2>
-            <h3 class="section-subheading text-muted">Join the next Coding Gym</h3>
-          </div>
-        </div>
-        <div class="row">
-          <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=tgfmm8k8jm44fba6cf8g6q4duk%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=Europe%2FRome" style="border-width:0" width="1140" height="600" frameborder="0" scrolling="no"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="how-it-works">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">How it works</h2>
-            <h3 class="section-subheading text-muted">A canonical Coding Gym</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/1_.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>8.45 PM</h4>
-                    <h4 class="subheading">Doors open</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">People arrive and meet. The Coding Gym moderator gives them a warm welcome!</p>
-                  </div>
-                </div>
-              </li>
-			  <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>
-                    <br/>Begin Loop
-                    </h4>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/2_.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>8.55 PM</h4>
-                    <h4 class="subheading">Pairing off</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">People pair off, agree on a programming language and seat side by side.</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/3_.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>9.00 PM</h4>
-                    <h4 class="subheading">Hands on a challenge</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">The attendees work in pair on a coding challenge: they can code and try solutions directly on the browser. In the meantime, the moderator peeks at what they are doing and gives hints if someone gets stuck.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/4_.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>9.30 PM</h4>
-                    <h4 class="subheading">The retrospective</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">The moderator opens a discussion on the solutions found and some volounteers explain theirs. People scrutinize tradeoffs and decisions taken. Then, the moderator changes some constraints of the problem and people discuss about the implications.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>Repeat
-                    <br>2
-                    <br>times!</h4>
-                </div>
-              </li>
-			  <li class="timeline-image">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/5_.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>11.00 PM</h4>
-                    <h4 class="subheading">The End!</h4>
-                  </div>
-                  <div class="timeline-body">
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+					<li>
+						<time datetime="2017-10-25">
+							<span class="day">25</span>
+							<span class="month">Oct</span>
+							<span class="year">2017</span>
+							<span class="time">9 PM</span>
+						</time>
+						<div class="info">
+							<h2 class="title"><span class="fa fa-map-marker"></span> MakeIt Modena</h2>
+							<p title="Host" class="desc"><span class="fa fa-home"></span> ConoscereLinux</p>
+							<ul>
+								<li style="width:20%;" class="text-left"><span class="fa fa-clock-o"></span> 9-11 PM</li>
+								<li style="width:40%;"><a href="https://www.hackerrank.com/modena-coding-oct-2017"><span class="fa fa-globe"></span> Website</a></li>
+								<li style="width:40%;"><span class="fa fa-user"></span> 12 Attendees</li>
+							</ul>
+						</div>
+					</li>
+					
+					<li>
+						<time datetime="2017-9-27">
+							<span class="day">27</span>
+							<span class="month">Sep</span>
+							<span class="year">2017</span>
+							<span class="time">9 PM</span>
+						</time>
+						<div class="info">
+							<h2 class="title"><span class="fa fa-map-marker"></span> MakeIt Modena</h2>
+							<p title="Host" class="desc"><span class="fa fa-home"></span> ConoscereLinux</p>
+							<ul>
+								<li style="width:20%;" class="text-left"><span class="fa fa-clock-o"></span> 9-11 PM</li>
+								<li style="width:40%;"><a href="https://www.hackerrank.com/modena-coding-sept-2017"><span class="fa fa-globe"></span> Website</a></li>
+								<li style="width:40%;"><span class="fa fa-user"></span> 11 Attendees</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		  
+		  
         </div>
       </div>
     </section>
