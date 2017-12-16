@@ -1,0 +1,156 @@
+"events":
+	[
+		{
+			"location" : "Modena",
+			"startDate" : "2017-11-22T21:00:00Z",
+			"endDate" : "2017-11-22T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-nov-2017",
+			"attendees" : "12"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2017-10-25T21:00:00Z",
+			"endDate" : "2017-10-25T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-oct-2017",
+			"attendees" : "10"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2017-09-27T21:00:00Z",
+			"endDate" : "2017-09-27T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-sept-2017",
+			"attendees" : "9"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2017-06-27T21:00:00Z",
+			"endDate" : "2017-06-27T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-june-2017",
+			"attendees" : "10"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2017-05-29T21:00:00Z",
+			"endDate" : "2017-05-29T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-may-2017",
+			"attendees" : "10"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2017-04-19T21:00:00Z",
+			"endDate" : "2017-04-19T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-april-2017",
+			"attendees" : "11"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2017-03-27T21:00:00Z",
+			"endDate" : "2017-03-27T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-march-2017",
+			"attendees" : "8"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2017-02-27T21:00:00Z",
+			"endDate" : "2017-02-27T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-february-2017",
+			"attendees" : "11"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2017-01-24T21:00:00Z",
+			"endDate" : "2017-01-24T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-january-2017",
+			"attendees" : "15"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2016-11-30T21:00:00Z",
+			"endDate" : "2016-11-30T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-november-2016",
+			"attendees" : "12"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2016-10-25T21:00:00Z",
+			"endDate" : "2016-10-25T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-october-2016",
+			"attendees" : "10"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2016-09-27T21:00:00Z",
+			"endDate" : "2016-09-27T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-september-2016",
+			"attendees" : "9"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2016-07-05T21:00:00Z",
+			"endDate" : "2016-07-05T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-july2016",
+			"attendees" : "7"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2016-05-31T21:00:00Z",
+			"endDate" : "2016-05-31T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-may2016",
+			"attendees" : "10"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2016-04-26T21:00:00Z",
+			"endDate" : "2016-04-26T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/lugcc-2016",
+			"attendees" : "10"
+		},
+		{
+			"location" : "Modena",
+			"startDate" : "2016-03-23T21:00:00Z",
+			"endDate" : "2016-03-23T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/lugcc-2016",
+			"attendees" : "9"
+		},
+		{
+			"location" : "Bologna",
+			"startDate" : "2016-04-16T21:00:00Z",
+			"endDate" : "2016-04-16T23:00:00Z",
+			"host" : "XPUG Bologna",
+			"host_website" : "https://www.eventbrite.it/o/xpug-bologna-8536358133",
+			"website" : "https://www.hackerrank.com/lugcc-2016",
+			"attendees" : "10"
+		}
+	]
