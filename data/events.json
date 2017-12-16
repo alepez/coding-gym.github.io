@@ -1,4 +1,5 @@
-"events":
+{
+	"events":
 	[
 		{
 			"location" : "Modena",
@@ -154,3 +155,4 @@
 			"attendees" : "10"
 		}
 	]
+}
