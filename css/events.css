@@ -101,6 +101,9 @@
 		color: rgb(30, 30, 30);
 		background-color: rgb(200, 200, 200);
 	}
+	.host-website-link > a{
+		color: rgb(30, 30, 30);
+	}
 	.facebook a,
 	.twitter a,
 	.google-plus a {
@@ -165,6 +168,13 @@
 		.event-list > li > .info > .desc {
 			padding: 0px 10px;
 		}
+		.host-website-link {
+			font-size: 13pt;
+			font-weight: 300;
+			margin: 0px;
+			padding: 0px 10px;
+			color: rgb(21, 183, 199);
+		}		
 		.event-list > li > .info > ul {
 			position: absolute;
 			left: 0px;

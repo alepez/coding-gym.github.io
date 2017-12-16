@@ -10,6 +10,9 @@
 
     <title>Coding Gym</title>
 
+	<!-- mustache -->
+	<script type="text/javascript" src="vendor/mustache/mustache.js" ></script>
+	
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,6 +29,108 @@
 	
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="img/favicon.ico" />
+		
+	
+	<!-- mustache rendering -->
+	<script>    	
+	
+	var template = 
+		"{{#years}}"+
+			"<ul class='event-list'>"+		
+			"<h4 class='section-heading text-uppercase text-center'>{{year}}</h4><br/>"+			
+			"{{#events}}"+
+			"<li>"+
+				"<time datetime='{{startDate}}'>"+
+					"<span class='day'>{{#renderDay}}{{startDate}}{{/renderDay}}</span>"+
+					"<span class='month'>{{#renderMonth}}{{startDate}}{{/renderMonth}}</span>"+
+					"<span class='year'>{{#renderYear}}{{startDate}}{{/renderYear}}</span>"+
+					"<span class='time'>{{#renderStartTime}}{{startDate}}{{/renderStartTime}}</span>"+
+				"</time>"+
+				"<div class='info'>"+
+							"<h2 class='title'><span class='fa fa-map-marker'></span>&nbsp;{{location}}</h2>"+
+							"<a title='Host' class='host-website-link' href='{{host_website}}'><span class='fa fa-home'></span>&nbsp;{{host}}</a>"+
+							"<ul>"+
+								"<li style='width:20%;' class='text-left'><span class='fa fa-clock-o'></span>{{#renderStartTime}}{{startDate}}{{/renderStartTime}}-{{#renderEndTime}}{{endDate}}{{/renderEndTime}}</li>"+
+								"<li style='width:40%;'><a href='{{website}}'><span class='fa fa-globe'></span> Website</a></li>"+
+								"<li style='width:40%;'><span class='fa fa-user'></span> {{attendees}} Attendees</li>"+
+							"</ul>"+
+				"</div>"+
+			"</li>"+
+			"{{/events}}"+
+			"</ul><br/><br/>"+
+		"{{/years}}";
+	
+	var getJSON = function(url, callback) {
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', url, true);
+		xhr.responseType = 'json';
+		
+		xhr.onload = function() {
+			var status = xhr.status;			
+			if (status == 200) {
+				callback(null, xhr.response);
+			} else {
+				callback(status);
+			}
+		};
+    
+		xhr.send();
+	};	
+	
+	getJSON('http://coding-gym.org/data/events.json',  function(err, view) {
+    
+		if (err != null) {
+			console.error(err);
+		} else {
+		
+			reducedView = view.events.reduce(function(result, current) {
+				result[new Date(current.startDate).getUTCFullYear()] = result[new Date(current.startDate).getUTCFullYear()] || [];
+				result[new Date(current.startDate).getUTCFullYear()].push(current);
+				return result;
+				}, {});	
+			
+			var groupedView = { "years" : [] };			
+			for (var i in reducedView)
+				groupedView.years.push({ "year" : i.toString(), "events" : reducedView[i.toString()] });			
+			groupedView.years = groupedView.years.reverse();
+			
+			var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+			
+			document.getElementById('events-rendering').innerHTML = Mustache.render(
+				template, {
+					years: groupedView.years, 
+					renderMonth : function() {
+						return function(val, render){
+							return monthNames[new Date(render(val)).getMonth()];
+						}					
+					},
+					renderDay : function() {
+						return function(val, render){
+							return new Date(render(val)).getDate();
+						}
+					},
+					renderYear : function() {
+						return function(val, render){
+							return new Date(render(val)).getFullYear();
+						}
+					},
+					renderStartTime : function() {
+						return function(val, render){
+							return " " + new Date(render(val)).getUTCHours()%12;
+						}
+					},
+					renderEndTime : function() {
+						return function(val, render){
+							hours = new Date(render(val)).getUTCHours();
+							meridiem = hours < 12 ? "AM" : "PM";
+							return " " + (hours%12) + " " + meridiem;
+						}
+					}
+			});
+		}
+	});
+		
+    </script>
 	
   </head>
 
@@ -78,64 +183,8 @@
           
 		<div class="container">
 		<div class="row">							
-			<div class="[ col-lg-12 col-xs-12 col-sm-12 ]">
-				<ul class="event-list">
-					<h4 class="section-heading text-uppercase text-center">2017</h4>
-					<br/>
-					<li>
-						<time datetime="2017-11-20">
-							<span class="day">22</span>
-							<span class="month">Nov</span>
-							<span class="year">2017</span>
-							<span class="time">9 PM</span>
-						</time>
-						<div class="info">
-							<h2 class="title"><span class="fa fa-map-marker"></span> MakeIt Modena</h2>
-							<p title="Host" class="desc"><span class="fa fa-home"></span> ConoscereLinux</p>							
-							<ul>
-								<li style="width:20%;" class="text-left"><span class="fa fa-clock-o"></span> 9-11 PM</li>
-								<li style="width:40%;"><a href="https://www.hackerrank.com/modena-coding-nov-2017"><span class="fa fa-globe"></span> Website</a></li>
-								<li style="width:40%;"><span class="fa fa-user"></span> 15 Attendees</li>
-							</ul>
-						</div>
-					</li>
-
-					<li>
-						<time datetime="2017-10-25">
-							<span class="day">25</span>
-							<span class="month">Oct</span>
-							<span class="year">2017</span>
-							<span class="time">9 PM</span>
-						</time>
-						<div class="info">
-							<h2 class="title"><span class="fa fa-map-marker"></span> MakeIt Modena</h2>
-							<p title="Host" class="desc"><span class="fa fa-home"></span> ConoscereLinux</p>
-							<ul>
-								<li style="width:20%;" class="text-left"><span class="fa fa-clock-o"></span> 9-11 PM</li>
-								<li style="width:40%;"><a href="https://www.hackerrank.com/modena-coding-oct-2017"><span class="fa fa-globe"></span> Website</a></li>
-								<li style="width:40%;"><span class="fa fa-user"></span> 12 Attendees</li>
-							</ul>
-						</div>
-					</li>
-					
-					<li>
-						<time datetime="2017-9-27">
-							<span class="day">27</span>
-							<span class="month">Sep</span>
-							<span class="year">2017</span>
-							<span class="time">9 PM</span>
-						</time>
-						<div class="info">
-							<h2 class="title"><span class="fa fa-map-marker"></span> MakeIt Modena</h2>
-							<p title="Host" class="desc"><span class="fa fa-home"></span> ConoscereLinux</p>
-							<ul>
-								<li style="width:20%;" class="text-left"><span class="fa fa-clock-o"></span> 9-11 PM</li>
-								<li style="width:40%;"><a href="https://www.hackerrank.com/modena-coding-sept-2017"><span class="fa fa-globe"></span> Website</a></li>
-								<li style="width:40%;"><span class="fa fa-user"></span> 11 Attendees</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
+			<div id="events-rendering" class="[ col-lg-12 col-xs-12 col-sm-12 ]"></div>
+			<!-- will be rendered by Mustache -->
 			</div>
 		</div>
 	</div>
