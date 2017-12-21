@@ -3,6 +3,15 @@
 	[
 		{
 			"location" : "Modena",
+			"startDate" : "2017-12-20T21:00:00Z",
+			"endDate" : "2017-12-20T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-dec-2017",
+			"attendees" : "8"
+		},
+		{
+			"location" : "Modena",
 			"startDate" : "2017-11-22T21:00:00Z",
 			"endDate" : "2017-11-22T23:00:00Z",
 			"host" : "ConoscereLinux",
