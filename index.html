@@ -428,119 +428,51 @@
             <h2 class="section-heading text-uppercase">Subscribe to our newsletter</h2>
             <h3 id="newsletter-subtext" class="section-subheading text-muted">We'll keep you posted with incoming events, once a month.</h3>
           </div>
+        </div> 
+        <div class="row justify-content-md-center">
+          <div class="col-xs-8 text-center">
+          <form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
+            <fieldset style="border:none;color:white" class="webform-custominputs">
+              <div>
+                <label for="email">Email
+                </label>
+                <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+              </div>
+              <div>
+                <label for="field_lastname">Last name
+                </label>
+                <input maxlength="40" class="form-control" name="field_lastname" size="20" type="text">
+              </div>
+              <div>
+                <label for="field_firstname">First name
+                </label>
+                <input maxlength="40" class="form-control" name="field_firstname" size="20" type="text">
+              </div>
+              <div class="webform-lists">
+              </div>
+            </fieldset>
+            <fieldset class="webform-options" style="border:none;">
+              <script id="recaptchaScript" src="https://www.google.com/recaptcha/api.js?onload=grecaptchaready&amp;render=explicit" async="" defer="">
+              </script>
+              <input type="submit" name="submit" value="Subscribe" id="eesubmit" disabled="">
+              <div id="captcha">
+                <div class="text-center">
+                  <div id="webformcaptcha">
+                  </div>
+                </div>
+                <script type="text/javascript">var grecaptchaready = function () { var eewebformsubmit = document.getElementById("eesubmit"); grecaptcha.render('webformcaptcha', { 'sitekey': '6Lca-iUUAAAAAAQ6T6vYEAp3YybZWpeKUXRJ5E8S', 'callback': function (response) { eewebformsubmit.disabled = false; } }); }</script>
+              </div>
+              <input type="hidden" name="publicaccountid" value="e4ea68b0-0c3b-45ca-8969-e1aac10e2cdd">
+              <input type="hidden" name="returnUrl" value="">
+              <input type="hidden" name="activationReturnUrl" value="">
+              <input type="hidden" name="activationTemplate" value="">
+              <input type="hidden" name="source" value="WebForm">
+              <input type="hidden" name="notifyEmail" value="ilpropheta@gmail.com">
+            </fieldset>
+          </form>
         </div>
-        		<!--Zoho  Web-Optin Form Starts Here-->
-<link href="https://campaigns.zoho.eu/css/ui.theme.css" rel="stylesheet" type="text/css" />
-<link href="https://campaigns.zoho.eu/css/ui.datepicker.css" rel="stylesheet" type="text/css" />
-<link href="https://campaigns.zoho.eu/css/ui.core.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="https://campaigns.zoho.eu/js/jquery-1.11.0.min.js"></script>
-<script type='text/javascript' src='https://campaigns.zoho.eu/js/jquery-migrate-1.2.1.min.js'></script>
-<script type='text/javascript' src='https://campaigns.zoho.eu/js/jquery-ui-1.10.4.custom.min.js'></script>
-<script type="text/javascript" src='https://campaigns.zoho.eu/js/ui.datepicker.js'  charset="utf-8"></script>
-<script type="text/javascript" src="https://campaigns.zoho.eu/js/jquery.form.js"></script>
-<script type="text/javascript" src="https://campaigns.zoho.eu/js/optin_min.js"></script>
-<script src='https://www.google.com/recaptcha/api.js?onload=loadreCaptcha&render=explicit' async defer ></script>
-<script type="text/javascript">
-var $ZC = jQuery.noConflict();
-var trackingText='ZCFORMVIEW';
-$ZC(document).ready( function($) {
-$ZC("#zc_trackCode").val(trackingText);
-	$ZC("#fieldBorder").val($ZC("[changeItem='SIGNUP_FORM_FIELD']").css("border-color"));
-	_setOptin(false,function(th){
-	/*Before submit, if you want to trigger your event, "include your code here"*/
-});
-
-/*Load Captcha For this*/ 
- 
-
- /*Tracking Enabled*/ 
- trackSignupEvent(trackingText);
- });
-var loadreCaptcha = function()
-{if($("[id='recapDiv']").length>1){
- var a = 1; $("[id='recapDiv']").each(function(){
-$(this).attr("id","recapDiv_"+a);
- widgetId1 = grecaptcha.render('recapDiv_'+a,{
- 'sitekey' : '6LdNeDUUAAAAABpwRBYbCMJvQoxLi4d31Oho0EBw',
-'theme' : 'light',
-});a++;});}else
- {widgetId1 = grecaptcha.render('recapDiv',{
- 'sitekey' : '6LdNeDUUAAAAABpwRBYbCMJvQoxLi4d31Oho0EBw',
-'theme' : 'light',
-});
-}
-}</script>
-
-<title>Coding Gym</title>
-<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<div id="customForm">
-	<div>
-		<table width="250" border="0" cellspacing="0" cellpadding="0" align="center" name="SIGNUP_BODY" id="SIGNUP_PAGE" style="border: 1px solid rgb(235, 235, 235); overflow: hidden; padding: 0px; border-radius: 1px; width: 281px;">
-			<tbody>
-				<tr>
-					<td align="center" valign="top" style="">
-						<div style="color: rgb(136, 136, 136); font-weight: bold; padding: 0px; font-family: Arial; font-size: 14px; border-width: 1px; border-style: none; border-color: rgb(237, 237, 237);" id="SIGNUP_HEADING" name="SIGNUP_HEADING" changeid="SIGNUP_MSG" changetype="SIGNUP_HEADER"></div>
-						<div>
-							<div style="position:relative;top: 30px;">
-								<div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154);  margin-top: 10px;margin-bottom:10px; ">
-									<table width="100%" cellpadding="0" cellspacing="0" border="0">
-										<tbody>
-											<tr>
-												<td width="10%">
-													<img class="successicon" src="https://campaigns.zoho.eu/images/challangeiconenable.jpg" align="absmiddle">
-												</td>
-												<td>
-													<span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;">&nbsp;&nbsp;Thank you for Signing Up</span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-							<form method="POST" id="zcampaignOptinForm" style="margin:0px;" action="https://zc1.maillist-manage.eu/campaigns/weboptin.zc" target="_zcSignup">
-								<div style="display:none;background-color:#FFEBE8;padding:10px 10px; color:#d20000; font-size:11px; margin:10px;border:solid 1px #ffd9d3; margin-top:20px;" id="errorMsgDiv">&nbsp;&nbsp;Please correct the marked field(s) below</div>
-								<div style="padding-left:15px; padding-right:15px;padding-bottom:15px; padding-top:15px;">
-									<input name="CONTACT_EMAIL" changetype="CONTACT_EMAIL" changeitem="SIGNUP_FORM_FIELD" type="text" id="CONTACT_EMAIL" style="border: 1px solid rgb(0, 21, 161); padding: 4px 0px; width: 100%; height: 30px; color: rgb(136, 136, 136); text-align: center; background-color: rgb(255, 255, 255); box-sizing: border-box; font-size: 15px; font-family: &quot;Trebuchet Ms&quot;;" placeholder="Email" class="placeholder">
-									<span style="display:none" id="dt_CONTACT_EMAIL">1,true,6,E-mail di contatto,2</span>
-								</div>
-								<div style="padding-left:15px; padding-right:15px;padding-bottom:15px; padding-top:15px;">
-									<input name="LASTNAME" changetype="LASTNAME" changeitem="SIGNUP_FORM_FIELD" type="text" id="LASTNAME" style="border: 1px solid rgb(0, 21, 161); padding: 4px 0px; width: 100%; height: 30px; color: rgb(136, 136, 136); text-align: center; background-color: rgb(255, 255, 255); box-sizing: border-box; font-size: 15px; font-family: &quot;Trebuchet Ms&quot;;" placeholder="Name" class="placeholder">
-									<span style="display:none" id="dt_LASTNAME">1,false,1,Cognome,2</span>
-								</div>
-								<div style="padding-left:15px; padding-right:15px;padding-bottom:15px;padding-top:5px;">
-									<input name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" type="button" style="-webkit-appearance: none; background-color: rgb(167, 167, 167); color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); width: 50%; cursor: pointer; font-size: 16px; font-family: &quot;Trebuchet Ms&quot;; border-radius: 4px; padding: 6px 10px;" value="Join Now">
-								</div><!-- Do not edit the below Zoho Campaigns hidden tags -->
-								<input type="hidden" id="fieldBorder" value="rgb(0, 21, 161)">
-								<input type="hidden" id="submitType" name="submitType" value="optinCustomView">
-								<input type="hidden" id="lD" name="lD" value="12b6f7b7306433f">
-								<input type="hidden" name="emailReportId" id="emailReportId" value="">
-								<input type="hidden" id="formType" name="formType" value="QuickForm">
-								<input type="hidden" name="zx" id="cmpZuid" value="14abd382c6">
-								<input type="hidden" name="zcvers" value="2.0">
-								<input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
-								<input type="hidden" id="mode" name="mode" value="OptinCreateView">
-								<input type="hidden" id="zcld" name="zcld" value="12b6f7b7306433f">
-								<input type="hidden" id="document_domain" value="zoho.eu">
-								<input type="hidden" id="zc_Url" value="zc1.maillist-manage.eu">
-								<input type="hidden" name="zc_trackCode" id="zc_trackCode" value="" onload="">
-								<input type="hidden" id="zc_formIx" name="zc_formIx" value="fd25bb67723b6e896fa30bf059e3eed406e495b3773da282"><!-- End of the campaigns hidden tags --></form>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<img src="https://zc1.maillist-manage.eu/images/spacer.gif" id="refImage" onload="referenceSetter(this)" style="display:none;">
-</div>
-<div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
-<div id="zcOptinSuccessPopup" style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
-	<span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;" id="closeSuccess">
-		<img src="https://campaigns.zoho.eu/images/videoclose.png">
-	</span>
-	<div id="zcOptinSuccessPanel"></div>
-</div>
-
-<!--Zoho  Web-Optin Form Ends Here-->
+      </div>
+        </div>           
       </div>
     </section>
 
