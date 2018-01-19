@@ -2,6 +2,70 @@
 	"events":
 	[
 		{
+			"location" : "Bologna",
+			"startDate" : "2018-01-09T19:00:00Z",
+			"endDate" : "2018-01-09T21:00:00Z",
+			"host" : "XPUG Bologna",
+			"host_website" : "https://www.eventbrite.it/e/biglietti-coding-gym-divertirsi-e-migliorarsi-a-colpi-di-algoritmi-marco-arena-41569884644",
+			"website" : "https://www.hackerrank.com/contests/xpug-jan-2018/",
+			"attendees" : "15"
+		},{
+			"location" : "Modena",
+			"startDate" : "2017-12-20T21:00:00Z",
+			"endDate" : "2017-12-20T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-dec-2017",
+			"attendees" : "8"
+		},{
+			"location" : "Modena",
+			"startDate" : "2017-12-20T21:00:00Z",
+			"endDate" : "2017-12-20T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-dec-2017",
+			"attendees" : "8"
+		},{
+			"location" : "Modena",
+			"startDate" : "2017-12-20T21:00:00Z",
+			"endDate" : "2017-12-20T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-dec-2017",
+			"attendees" : "8"
+		},{
+			"location" : "Modena",
+			"startDate" : "2017-12-20T21:00:00Z",
+			"endDate" : "2017-12-20T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-dec-2017",
+			"attendees" : "8"
+		},{
+			"location" : "Modena",
+			"startDate" : "2017-12-20T21:00:00Z",
+			"endDate" : "2017-12-20T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-dec-2017",
+			"attendees" : "8"
+		},{
+			"location" : "Modena",
+			"startDate" : "2017-12-20T21:00:00Z",
+			"endDate" : "2017-12-20T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-dec-2017",
+			"attendees" : "8"
+		},{
+			"location" : "Modena",
+			"startDate" : "2017-12-20T21:00:00Z",
+			"endDate" : "2017-12-20T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-dec-2017",
+			"attendees" : "8"
+		},{
 			"location" : "Modena",
 			"startDate" : "2017-12-20T21:00:00Z",
 			"endDate" : "2017-12-20T23:00:00Z",
