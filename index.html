@@ -431,45 +431,50 @@
         </div> 
         <div class="row justify-content-md-center">
           <div class="col-xs-8 text-center">
-          <form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
-            <fieldset style="border:none;color:white" class="webform-custominputs">
-              <div>
-                <label for="email">Email
-                </label>
-                <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
-              </div>
-              <div>
-                <label for="field_lastname">Last name
-                </label>
-                <input maxlength="40" class="form-control" name="field_lastname" size="20" type="text">
-              </div>
-              <div>
-                <label for="field_firstname">First name
-                </label>
-                <input maxlength="40" class="form-control" name="field_firstname" size="20" type="text">
-              </div>
-              <div class="webform-lists">
-              </div>
-            </fieldset>
-            <fieldset class="webform-options" style="border:none;">
-              <script id="recaptchaScript" src="https://www.google.com/recaptcha/api.js?onload=grecaptchaready&amp;render=explicit" async="" defer="">
-              </script>
-              <input type="submit" name="submit" value="Subscribe" id="eesubmit" disabled="">
-              <div id="captcha">
-                <div class="text-center">
-                  <div id="webformcaptcha">
+            <form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
+              <fieldset style="border:none; color:white" class="webform-custominputs">
+                <div>
+                  <label for="email">Email
+                  </label>
+                  <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+                </div>
+                <div>
+                  <label for="field_firstname">First name
+                  </label>
+                  <input maxlength="40" class="form-control" name="field_firstname" size="20" type="text">
+                </div>
+                <div>
+                  <label for="field_lastname">Last name
+                  </label>
+                  <input maxlength="40" class="form-control" name="field_lastname" size="20" type="text">
+                </div>
+                <div class="webform-lists">
+                  <div>
+                    <input type="checkbox" disabled="disabled" name="publiclistid" id="yxlxofKt" value="0ec7b449-9485-4345-b286-867b1b575a7a" checked="">
+                    <label class="publiclistlabel" for="yxlxofKt">Coding-Gym
+                    </label>
                   </div>
                 </div>
-                <script type="text/javascript">var grecaptchaready = function () { var eewebformsubmit = document.getElementById("eesubmit"); grecaptcha.render('webformcaptcha', { 'sitekey': '6Lca-iUUAAAAAAQ6T6vYEAp3YybZWpeKUXRJ5E8S', 'callback': function (response) { eewebformsubmit.disabled = false; } }); }</script>
-              </div>
-              <input type="hidden" name="publicaccountid" value="e4ea68b0-0c3b-45ca-8969-e1aac10e2cdd">
-              <input type="hidden" name="returnUrl" value="">
-              <input type="hidden" name="activationReturnUrl" value="">
-              <input type="hidden" name="activationTemplate" value="">
-              <input type="hidden" name="source" value="WebForm">
-              <input type="hidden" name="notifyEmail" value="ilpropheta@gmail.com">
-            </fieldset>
-          </form>
+              </fieldset>
+              <fieldset class="webform-options" style="border:none;">
+                <script id="recaptchaScript" src="https://www.google.com/recaptcha/api.js?onload=grecaptchaready&amp;render=explicit" async="" defer="">
+                </script>
+                <input type="submit" name="submit" value="Subscribe" id="eesubmit" disabled="">
+                <div id="captcha">
+                  <div class="text-center">
+                    <div id="webformcaptcha">
+                    </div>
+                  </div>
+                  <script type="text/javascript">var grecaptchaready = function () { var eewebformsubmit = document.getElementById("eesubmit"); grecaptcha.render('webformcaptcha', { 'sitekey': '6Lca-iUUAAAAAAQ6T6vYEAp3YybZWpeKUXRJ5E8S', 'callback': function (response) { eewebformsubmit.disabled = false; } }); }</script>
+                </div>
+                <input type="hidden" name="publicaccountid" value="e4ea68b0-0c3b-45ca-8969-e1aac10e2cdd">
+                <input type="hidden" name="returnUrl" value="">
+                <input type="hidden" name="activationReturnUrl" value="">
+                <input type="hidden" name="activationTemplate" value="">
+                <input type="hidden" name="source" value="WebForm">
+                <input type="hidden" name="notifyEmail" value="staff@coding-gym.org">
+              </fieldset>
+            </form>            
         </div>
       </div>
         </div>           
