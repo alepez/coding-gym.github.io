@@ -2,6 +2,15 @@
 	"events":
 	[
 		{
+			"location" : "Modena",
+			"startDate" : "2018-01-24T21:00:00Z",
+			"endDate" : "2018-01-24T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/modena-coding-jan-2018",
+			"attendees" : "20"
+		},
+		{
 			"location" : "Bologna",
 			"startDate" : "2018-01-09T19:00:00Z",
 			"endDate" : "2018-01-09T21:00:00Z",
