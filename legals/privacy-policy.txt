@@ -1,0 +1,54 @@
+PRIVACY POLICY
+
+We are committed to ensuring that your privacy is protected and we shall endeavour to use any information that you provide when using this website in accordance with this privacy policy.
+
+This privacy policy explains what information we collect, how we protect any information you submit to us, and how we use it.
+
+We may amend this policy from time to time by updating this page. Therefore, we suggest you check this page occasionally to ensure you are aware of and are happy with any amendments.
+
+* What information do we collect?
+
+Personal information may be collected from you only when you register for newsletters. In that case we collect your email address and, optionally, your first name and your last name.
+
+Such information are not directly stored by us, rather, they are managed by Elastic Email, an email marketing service. For further information refer to https://elasticemail.com.
+
+* How is the information used?
+
+We use this information for the following reasons:
+
+- For statistical purposes and analysis for management purposes in order to administer the website or improve our activities and events.
+- To inform you about our events and activities, or other related information that we think would be of interest to you.
+
+Your information will not be disclosed to any third party unless you have given your consent to such disclosure. You may at any time ask us to refrain from sending you messages by clicking the link "unsubscribe" which you find on any of our newsletters.  
+
+If you would like us to destroy information we hold about you, please let us know (send us an email at staff [at] coding-gym [dot] org).
+
+We may disclose aggregate statistics about our site visitors and event attendees in order to describe our activities to prospective partners, advertisers and other reputable third parties and for other lawful purposes, but these statistics will include no personally identifying information.
+
+
+* Cookies
+
+Cookies are text files stored on your computer, and accessible only to the websites which create them.
+
+Our website uses only third party cookies for improving user experience. For instance, Google Calendar may store a cookie if, while you visit the website, you are logged in with a Google Account.
+
+Most web browsers automatically accept cookies, however you may delete, or disable cookies by following the instructions at http://www.allaboutcookies.org/manage-cookies/.  Please note that you may not be able to take full advantage of a website if you disable cookies. Our website uses cookies to keep you logged in, so disabling cookies may impair your experience of the service.
+
+
+* Changes
+
+We may make changes to this privacy policy from time to time. If we change our privacy policy we will post the changes on this page. If the change in our privacy policy affects the use of your personal information we will use our best endeavours to contact you by email to seek your consent to the use.  Continued use of the service will signify that you agree to any such changes.
+
+
+* Your acceptance of this privacy policy
+
+If you do not agree to this privacy policy, please do not use our site.
+
+By using our site, you consent to the collection and use of information by us. Owing to the global nature of the internet infrastructure, the information you provide may be transferred in transit to countries outside the European Economic Area that do not have similar protections in place regarding your data and its use as set out in this policy. However, we have taken the steps outlined above to try to improve the security of your information. By submitting your information you consent to these transfers.
+
+
+* How to contact us
+
+We welcome your views about our website and our privacy policy. If you would like to contact us with any queries or comments please send an e-mail to staff [at] coding-gym [dot] org. You may request details of personal information which we hold.
+
+Last update: Jan 31 2018
