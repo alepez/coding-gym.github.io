@@ -6,11 +6,13 @@ This privacy policy explains what information we collect, how we protect any inf
 
 We may amend this policy from time to time by updating this page. Therefore, we suggest you check this page occasionally to ensure you are aware of and are happy with any amendments.
 
+
 * What information do we collect?
 
 Personal information may be collected from you only when you register for newsletters. In that case we collect your email address and, optionally, your first name and your last name.
 
 Such information are not directly stored by us, rather, they are managed by Elastic Email, an email marketing service. For further information refer to https://elasticemail.com.
+
 
 * How is the information used?
 
