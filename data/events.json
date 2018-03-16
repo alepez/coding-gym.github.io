@@ -2,6 +2,15 @@
 	"events":
 	[
 		{
+			"location" : "Milano",
+			"startDate" : "2018-03-12T19:00:00Z",
+			"endDate" : "2018-03-12T21:30:00Z",
+			"host" : "Mikamai",
+			"host_website" : "https://mikamai.com",
+			"website" : "https://hackerrank.com/milano-coding-gym-march-2018",
+			"attendees" : "26"
+		},
+		{
 			"location" : "Modena",
 			"startDate" : "2018-02-28T21:00:00Z",
 			"endDate" : "2018-02-28T23:00:00Z",
