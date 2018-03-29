@@ -2,6 +2,15 @@
 	"events":
 	[
 		{
+			"location" : "Modena",
+			"startDate" : "2018-03-28T21:00:00Z",
+			"endDate" : "2018-03-28T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/coding-gym-mo0318",
+			"attendees" : "15"
+		},
+		{
 			"location" : "Milan",
 			"startDate" : "2018-03-12T19:00:00Z",
 			"endDate" : "2018-03-12T21:30:00Z",
