@@ -1,0 +1,89 @@
+html, body {
+  font-family: monospace;
+  background-color: #282828;
+  color: #ebdbb2;
+  font-size: 2vw;
+  overflow: hidden;
+}
+
+ul.toolbar {
+  display: flex;
+  position: absolute;
+  bottom: 1ex;
+  right: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 1ex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.timer-root.toolbar-visible ul.toolbar {
+  opacity: 1;
+}
+
+ul.toolbar li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+ul.toolbar li a {
+  color: #98971a;
+  border: 1px solid #98971a;
+  text-decoration: none;
+  padding: 1ex;
+  display: inline-block;
+  margin-left: 0.5em;
+  min-width: 1.5em;
+  transition: border 250ms ease-out;
+}
+
+ul.toolbar li a:hover {
+  color: #b8bb26;
+  border: 1px solid #b8bb26;
+}
+
+.timer-text {
+  font-size: 18vw;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -1.5ex;
+}
+
+.timer-root.near-expiration .timer-text {
+  color: #fabd2f;
+}
+
+.timer-root.expired .timer-text {
+  color: #fb4934;
+}
+
+.timer-root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.timer-root.playing .play-btn {
+  display: none;
+}
+
+.timer-root.playing .pause-btn {
+  display: inline-block;
+}
+
+.timer-root .play-btn {
+  display: inline-block;
+}
+
+.timer-root .pause-btn {
+  display: none;
+}
+
+
