@@ -1,127 +1,158 @@
+'use strict';
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 (function () {
 
-  const save = (state) => {
-    const json = JSON.stringify(state);
+  var save = function save(state) {
+    var json = JSON.stringify(state);
     localStorage.setItem('jstimer', json);
     return state;
   };
 
-  const load = (id) => {
-    const json = localStorage.getItem('jstimer');
-    const state = JSON.parse(json);
+  var load = function load(id) {
+    var json = localStorage.getItem('jstimer');
+    var state = JSON.parse(json);
     return state;
   };
 
-  const timeToTarget = (state) => state.playing ? (state.targetTime - now()) : state.timeDiff;
+  var timeToTarget = function timeToTarget(state) {
+    return state.playing ? state.targetTime - now() : state.timeDiff;
+  };
 
-  const isExpired = (state) => timeToTarget(state) < 0;
+  var isExpired = function isExpired(state) {
+    return timeToTarget(state) < 0;
+  };
 
-  const isNearExpiration = (state) => timeToTarget(state) < 60000 && !isExpired(state);
+  var isNearExpiration = function isNearExpiration(state) {
+    return timeToTarget(state) < 60000 && !isExpired(state);
+  };
 
-  const padLeft = (a, b) => (1e15 + a + "").slice(-b)
+  var padLeft = function padLeft(a, b) {
+    return (1e15 + a + "").slice(-b);
+  };
 
-  const now = () => new Date().getTime();
+  var now = function now() {
+    return new Date().getTime();
+  };
 
-  const formatTime = (t) => {
-    const sign = t >= 0 ? '' : '-';
-    let tt = Math.abs(t);
-    const milliseconds = t % 1000;
+  var formatTime = function formatTime(t) {
+    var sign = t >= 0 ? '' : '-';
+    var tt = Math.abs(t);
+    var milliseconds = t % 1000;
     tt = Math.floor(tt / 1000);
-    const seconds = tt % 60;
-    tt = ((tt - seconds) / 60);
-    const minutes = tt % 60;
-    const hours = (tt - minutes) / 60
-    const h = padLeft(hours.toFixed(0), 2);
-    const m = padLeft(minutes.toFixed(0), 2);
-    const s = padLeft(seconds.toFixed(0), 2);
-    const ms = padLeft(milliseconds.toFixed(0), 3);
-    return `${sign}${h}:${m}:${s}`
-  }
+    var seconds = tt % 60;
+    tt = (tt - seconds) / 60;
+    var minutes = tt % 60;
+    var hours = (tt - minutes) / 60;
+    var h = padLeft(hours.toFixed(0), 2);
+    var m = padLeft(minutes.toFixed(0), 2);
+    var s = padLeft(seconds.toFixed(0), 2);
+    var ms = padLeft(milliseconds.toFixed(0), 3);
+    return '' + sign + h + ':' + m + ':' + s;
+  };
 
-  const updateState = (state, update) => save(Object.assign({}, state, update));
+  var updateState = function updateState(state, update) {
+    return save(Object.assign({}, state, update));
+  };
 
-  const renderTimeEl = (state) => {
+  var renderTimeEl = function renderTimeEl(state) {
     return formatTime(timeToTarget(state));
   };
 
-  const play = (state) => state.playing ? state : updateState(state, {
-    playing: true,
-    targetTime: now() + state.timeDiff,
-  });
-
-  const pause = (state) => !state.playing ? state : updateState(state, {
-    playing: false,
-    timeDiff:  state.targetTime - now(),
-  });
-
-  const showToolbar = (state) => updateState(state, { showToolbarTimer: now() + 1000 });
-
-  const reset = (state) => updateState(state, {
-    playing: false,
-    timeDiff: 0,
-    targetTime: now()
-  });
-
-  const incrementTime = (state, milliseconds) => {
-    const playing = state.playing;
-    state = pause(state);
-    const timeDiff = state.timeDiff + milliseconds;
-    return updateState(state, {
-      playing,
-      timeDiff,
-      targetTime: now() + timeDiff,
+  var play = function play(state) {
+    return state.playing ? state : updateState(state, {
+      playing: true,
+      targetTime: now() + state.timeDiff
     });
   };
 
-  const setup = ({ root, timerText, playBtn, pauseBtn, resetBtn, incrBtns }) => {
+  var pause = function pause(state) {
+    return !state.playing ? state : updateState(state, {
+      playing: false,
+      timeDiff: state.targetTime - now()
+    });
+  };
 
-    const defaultTimeDiff = 60 * 90 * 1000; // milliseconds
+  var showToolbar = function showToolbar(state) {
+    return updateState(state, { showToolbarTimer: now() + 1000 });
+  };
 
-    const defaultState = {
+  var reset = function reset(state) {
+    return updateState(state, {
+      playing: false,
+      timeDiff: 0,
+      targetTime: now()
+    });
+  };
+
+  var incrementTime = function incrementTime(state, milliseconds) {
+    var playing = state.playing;
+    state = pause(state);
+    var timeDiff = state.timeDiff + milliseconds;
+    return updateState(state, {
+      playing: playing,
+      timeDiff: timeDiff,
+      targetTime: now() + timeDiff
+    });
+  };
+
+  var setup = function setup(_ref) {
+    var root = _ref.root,
+      timerText = _ref.timerText,
+      playBtn = _ref.playBtn,
+      pauseBtn = _ref.pauseBtn,
+      resetBtn = _ref.resetBtn,
+      incrBtns = _ref.incrBtns;
+
+
+    var defaultTimeDiff = 60 * 90 * 1000; // milliseconds
+
+    var defaultState = {
       playing: false,
       timeDiff: defaultTimeDiff,
       targetTime: now() + defaultTimeDiff,
-      showToolbarTimer: 0,
+      showToolbarTimer: 0
     };
 
-    const savedState = load();
+    var savedState = load();
 
-    let state = Object.assign({}, defaultState, savedState);
+    var state = Object.assign({}, defaultState, savedState);
 
-    root.onmousemove = () => {
+    root.onmousemove = function () {
       state = showToolbar(state);
       loop();
     };
 
-    playBtn.onclick = () => {
+    playBtn.onclick = function () {
       state = play(state);
       loop();
       return false;
     };
 
-    pauseBtn.onclick = () => {
+    pauseBtn.onclick = function () {
       state = pause(state);
       loop();
       return false;
     };
 
-    resetBtn.onclick = () => {
+    resetBtn.onclick = function () {
       state = reset(state);
       loop();
       return false;
     };
 
-    incrBtns.forEach((element) => {
-      const minutes = Number(element.hash.slice(1));
-      const milliseconds = minutes * 60 * 1000;
-      element.onclick = (event) => {
+    incrBtns.forEach(function (element) {
+      var minutes = Number(element.hash.slice(1));
+      var milliseconds = minutes * 60 * 1000;
+      element.onclick = function (event) {
         state = incrementTime(state, milliseconds);
         loop();
         return false;
       };
     });
 
-    const loop = () => {
+    var loop = function loop() {
       timerText.innerHTML = renderTimeEl(state);
       root.classList.toggle('expired', isExpired(state));
       root.classList.toggle('near-expiration', isNearExpiration(state));
@@ -139,7 +170,6 @@
     playBtn: document.getElementsByClassName('play-btn')[0],
     pauseBtn: document.getElementsByClassName('pause-btn')[0],
     resetBtn: document.getElementsByClassName('reset-btn')[0],
-    incrBtns: [...document.getElementsByClassName('incr-button')],
+    incrBtns: [].concat(_toConsumableArray(document.getElementsByClassName('incr-button')))
   });
-
-}());
+})();
