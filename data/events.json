@@ -2,6 +2,24 @@
 	"events":
 	[
 		{
+			"location" : "Milan",
+			"startDate" : "2018-04-23T19:30:00Z",
+			"endDate" : "2018-04-23T21:30:00Z",
+			"host" : "Mikamai",
+			"host_website" : "https://mikamai.com",
+			"website" : "https://hackerrank.com/coding-gym-mi0418",
+			"attendees" : "11"
+		},
+		{
+			"location" : "Barcelona",
+			"startDate" : "2018-04-21T10:00:00Z",
+			"endDate" : "2018-04-21T13:00:00Z",
+			"host" : "C++ Programmers Meetup",
+			"host_website" : "https://www.meetup.com/it-IT/C-Programmer-Meetup/",
+			"website" : "https://hackerrank.com/coding-gym-bcn0418",
+			"attendees" : "8"
+		},
+		{
 			"location" : "Modena",
 			"startDate" : "2018-04-18T21:00:00Z",
 			"endDate" : "2018-04-18T23:00:00Z",
