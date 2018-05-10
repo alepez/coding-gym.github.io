@@ -1,3 +1,3 @@
 # Coding Gym
 
-Home of [http://coding-gym.org](http://coding-gym.org)
+Home of [https://coding-gym.org](http://coding-gym.org)
