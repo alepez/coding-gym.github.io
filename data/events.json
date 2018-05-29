@@ -2,6 +2,24 @@
 	"events":
 	[
 		{
+			"location" : "Milan",
+			"startDate" : "2018-05-28T19:30:00Z",
+			"endDate" : "2018-05-28T21:30:00Z",
+			"host" : "Mikamai",
+			"host_website" : "https://mikamai.com",
+			"website" : "https://hackerrank.com/coding-gym-mi0518",
+			"attendees" : "14"
+		},
+		{
+			"location" : "Padua",
+			"startDate" : "2018-05-28T21:00:00Z",
+			"endDate" : "2018-05-28T23:00:00Z",
+			"host" : "Programmers in Padua",
+			"host_website" : "http://www.programmersinpadua.it",
+			"website" : "https://hackerrank.com/coding-gym-pd0518/",
+			"attendees" : "12"
+		},
+		{
 			"location" : "Modena",
 			"startDate" : "2018-05-23T21:00:00Z",
 			"endDate" : "2018-05-23T23:00:00Z",
