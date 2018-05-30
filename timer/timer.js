@@ -163,13 +163,4 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     loop();
     setInterval(loop, 1000);
   };
-
-  setup({
-    root: document.getElementsByClassName('timer-root')[0],
-    timerText: document.getElementsByClassName('timer-text')[0],
-    playBtn: document.getElementsByClassName('play-btn')[0],
-    pauseBtn: document.getElementsByClassName('pause-btn')[0],
-    resetBtn: document.getElementsByClassName('reset-btn')[0],
-    incrBtns: [].concat(_toConsumableArray(document.getElementsByClassName('incr-button')))
-  });
 })();

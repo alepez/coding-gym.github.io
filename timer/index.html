@@ -24,6 +24,22 @@
     </ul>
   </div>
 
-  <script src="timer.js" charset="utf-8"></script>
+  <script src="timer.es6.js" charset="utf-8"></script>
+
+  <script charset="utf-8">
+    var Timer = timer.Timer;
+    var Controls = timer.Controls;
+    var timer = new Timer({
+      root: document.getElementsByClassName('timer-root')[0],
+      timerText: document.getElementsByClassName('timer-text')[0]
+    });
+    var controls = new Controls({
+      timer: timer,
+      playBtn: document.getElementsByClassName('play-btn')[0],
+      pauseBtn: document.getElementsByClassName('pause-btn')[0],
+      resetBtn: document.getElementsByClassName('reset-btn')[0],
+      incrBtns: document.getElementsByClassName('incr-button')
+    });
+  </script>
 </body>
 </html>
