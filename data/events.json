@@ -2,6 +2,15 @@
 	"events":
 	[
 		{
+			"location" : "Padua",
+			"startDate" : "2018-06-20T20:30:00Z",
+			"endDate" : "2018-06-20T23:00:00Z",
+			"host" : "Programmers in Padua",
+			"host_website" : "http://www.programmersinpadua.it",
+			"website" : "https://hackerrank.com/coding-gym-pd0618/",
+			"attendees" : "10"
+		},
+		{
 			"location" : "Milan",
 			"startDate" : "2018-05-28T19:30:00Z",
 			"endDate" : "2018-05-28T21:30:00Z",
