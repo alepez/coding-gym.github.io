@@ -2,6 +2,15 @@
 	"events":
 	[
 		{
+			"location" : "Modena",
+			"startDate" : "2018-05-27T21:00:00Z",
+			"endDate" : "2018-05-27T23:00:00Z",
+			"host" : "ConoscereLinux",
+			"host_website" : "http://conoscerelinux.org",
+			"website" : "https://www.hackerrank.com/coding-gym-mo0618",
+			"attendees" : "16"
+		},
+		{
 			"location" : "Padua",
 			"startDate" : "2018-06-20T20:30:00Z",
 			"endDate" : "2018-06-20T23:00:00Z",
