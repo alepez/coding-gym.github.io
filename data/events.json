@@ -11,6 +11,15 @@
 			"attendees" : "16"
 		},
 		{
+			"location" : "Barcelona",
+			"startDate" : "2018-06-27T19:00:00Z",
+			"endDate" : "2018-06-27T22:00:00Z",
+			"host" : "Okado Technologies",
+			"host_website" : "https://coding-gym-bcn0618.eventbrite.it",
+			"website" : "https://hackerrank.com/coding-gym-bcn0618",
+			"attendees" : "6"
+		},
+		{
 			"location" : "Padua",
 			"startDate" : "2018-06-20T20:30:00Z",
 			"endDate" : "2018-06-20T23:00:00Z",
