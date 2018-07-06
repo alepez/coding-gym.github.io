@@ -2,6 +2,15 @@
 	"events":
 	[
 		{
+			"location" : "Milan",
+			"startDate" : "2018-07-02T19:30:00Z",
+			"endDate" : "2018-07-02T21:30:00Z",
+			"host" : "Mikamai",
+			"host_website" : "https://mikamai.com",
+			"website" : "https://hackerrank.com/coding-gym-mi0718",
+			"attendees" : "12"
+		},
+		{
 			"location" : "Modena",
 			"startDate" : "2018-06-27T21:00:00Z",
 			"endDate" : "2018-06-27T23:00:00Z",
