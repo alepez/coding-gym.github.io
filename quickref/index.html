@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Coding Gym is a programming lab that helps people improve their programming skills, open to any language.">
+  <meta name="author" content="Marco Arena">
+  <meta name="keywords" content="Coding,Programming,Event,Meetup,Algorithms,Interview Questions,Challenges">
+
+  <title>Coding Gym</title>
+
+  <!-- mustache -->
+  <script type="text/javascript" src="/vendor/mustache/mustache.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/css/quickref.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <div class="col-md-2 d-md-block d-none">
+        <a class="navbar-brand" href="/"><img src="/img/coding-gym-logo-250px.png" href="#page-top" width="100"></img></a>
+      </div>
+      <div class="col-md-10 col-12">
+        <h1 class="quickref-title">Coding Gym</h1>
+        <img src="/img/coding-gym-logo-250px.png" width="48" class="d-md-none"></img>
+        <span class="datetime"></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="quickref-container">
+      <div>
+        <h2 class="before-start">Coding Gym will start in <span class="timer timer-start"> <span class="timer-text"></span> </span> </h2>
+        <h2 class="after-start">Coding Gym has started</h2>
+        <a href="#" class="registration-btn btn btn-primary" target="_blank">Register</a>
+        <a href="https://www.hackerrank.com/login" class="btn btn-primary" target="_blank">Hackerrank</a>
+        <a href="#" class="location-btn btn btn-primary" target="_blank">Location</a>
+      </div>
+
+      <hr/>
+
+      <p class="before-start">Challenges will be visible after <span class="start-time"></span></p>
+
+      <h2 class="after-start">Challenges</h2>
+
+      <a class="challenge row after-start" href="">
+        <h3 class="col-8"></h3>
+        <div class="timer timer-coding col-2">
+          <div class="timer-text"></div>
+        </div>
+        <div class="timer timer-retrospective col-2">
+          <div class="timer-text"></div>
+        </div>
+      </a>
+
+      <a class="challenge row after-start" href="">
+        <h3 class="col-8"></h3>
+        <div class="timer timer-coding col-2">
+          <div class="timer-text"></div>
+        </div>
+        <div class="timer timer-retrospective col-2">
+          <div class="timer-text"></div>
+        </div>
+      </a>
+
+      <a class="challenge row after-start" href="">
+        <h3 class="col-8"></h3>
+        <div class="timer timer-coding col-2">
+          <div class="timer-text"></div>
+        </div>
+        <div class="timer timer-retrospective col-2">
+          <div class="timer-text"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <audio id="audio-alarm">
+    <source src="/quickref/alarm.oga" type="audio/ogg">
+  </audio>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/timer/timer.js" charset="utf-8"></script>
+  <script src="/js/quickref.js" charset="utf-8"></script>
+  <script src="http://127.0.0.1:9001/js/socket.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      var eventData = quickref.dataFromHash();
+      var $ctx = $('.quickref-container');
+      quickref.setup($ctx, eventData);
+      $('h1').text(eventData.title);
+      $('.datetime').text(new Date(eventData.startTime).toLocaleString());
+    });
+  </script>
+</body>
+
+</html>
