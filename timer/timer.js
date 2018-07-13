@@ -99,6 +99,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
   var setup = function setup(_ref) {
     var root = _ref.root,
+      enableLocalStorage = _ref.enableLocalStorage || false,
       onTick = _ref.onTick,
       timerText = _ref.timerText,
       playBtn = _ref.playBtn,
@@ -117,11 +118,11 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       showToolbarTimer: 0
     };
 
-    var savedState = load();
+    var savedState = enableLocalStorage ? load() : {};
 
-    var forcedTarget = { targetTime: target };
+    var override = { targetTime: target, playing: _ref.playing || false };
 
-    var state = Object.assign({}, defaultState, savedState, forcedTarget);
+    var state = Object.assign({}, defaultState, savedState, override);
 
     root.onmousemove = function () {
       state = showToolbar(state);

@@ -25,6 +25,7 @@
       root: $timer[0],
       timerText: $timer.find('.timer-text')[0],
       target: target,
+      playing: true,
       onTick: onTick
     });
   };
