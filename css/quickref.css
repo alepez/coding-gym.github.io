@@ -1,0 +1,62 @@
+.navbar-dark {
+  background: #000000;
+  color: #ffffff;
+}
+
+.quickref-container {
+  display: flex;
+  margin-top: 100px;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
+.quickref-container a {
+  text-decoration: none;
+}
+
+.quickref-container a:hover {
+  text-decoration: none;
+}
+
+.quickref-container .challenge {
+  margin: 0.5em 0;
+  align-items: center;
+}
+
+.quickref-container .challenge.active {
+  background-color: #3fabb1;
+}
+
+.quickref-container .challenge.active h3 {
+  color: #ffffff;
+}
+
+.quickref-container .challenge .timer {
+  background: #9be2e5;
+  color: #ffffff;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 6em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.quickref-container .challenge .timer.active {
+  background: #ffffff;
+  color: #000000;
+  font-size: 24px;
+}
+
+.quickref-container .challenge .timer.warn {
+  background: #ffc95a;
+  color: #000000;
+}
+
+.quickref-container .challenge .timer.old {
+  background: #e3120d;
+  color: #e3120d;
+}
+
+.quickref-container .challenge .timer.future {
+  visibility: hidden;
+}

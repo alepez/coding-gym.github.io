@@ -99,11 +99,13 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
   var setup = function setup(_ref) {
     var root = _ref.root,
+      onTick = _ref.onTick,
       timerText = _ref.timerText,
       playBtn = _ref.playBtn,
       pauseBtn = _ref.pauseBtn,
       resetBtn = _ref.resetBtn,
-      incrBtns = _ref.incrBtns;
+      incrBtns = _ref.incrBtns,
+      target = _ref.target;
 
 
     var defaultTimeDiff = 60 * 90 * 1000; // milliseconds
@@ -117,40 +119,50 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
     var savedState = load();
 
-    var state = Object.assign({}, defaultState, savedState);
+    var forcedTarget = { targetTime: target };
+
+    var state = Object.assign({}, defaultState, savedState, forcedTarget);
 
     root.onmousemove = function () {
       state = showToolbar(state);
       loop();
     };
 
-    playBtn.onclick = function () {
-      state = play(state);
-      loop();
-      return false;
-    };
-
-    pauseBtn.onclick = function () {
-      state = pause(state);
-      loop();
-      return false;
-    };
-
-    resetBtn.onclick = function () {
-      state = reset(state);
-      loop();
-      return false;
-    };
-
-    incrBtns.forEach(function (element) {
-      var minutes = Number(element.hash.slice(1));
-      var milliseconds = minutes * 60 * 1000;
-      element.onclick = function (event) {
-        state = incrementTime(state, milliseconds);
+    if (playBtn) {
+      playBtn.onclick = function () {
+        state = play(state);
         loop();
         return false;
       };
-    });
+    }
+
+    if (pauseBtn) {
+      pauseBtn.onclick = function () {
+        state = pause(state);
+        loop();
+        return false;
+      };
+    }
+
+    if (resetBtn) {
+      resetBtn.onclick = function () {
+        state = reset(state);
+        loop();
+        return false;
+      };
+    }
+
+    if (incrBtns) {
+      incrBtns.forEach(function (element) {
+        var minutes = Number(element.hash.slice(1));
+        var milliseconds = minutes * 60 * 1000;
+        element.onclick = function (event) {
+          state = incrementTime(state, milliseconds);
+          loop();
+          return false;
+        };
+      });
+    }
 
     var loop = function loop() {
       timerText.innerHTML = renderTimeEl(state);
@@ -158,18 +170,12 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       root.classList.toggle('near-expiration', isNearExpiration(state));
       root.classList.toggle('playing', state.playing === true);
       root.classList.toggle('toolbar-visible', state.showToolbarTimer > now());
+      if (onTick) onTick(JSON.parse(JSON.stringify(state)));
     };
 
     loop();
     setInterval(loop, 1000);
   };
 
-  setup({
-    root: document.getElementsByClassName('timer-root')[0],
-    timerText: document.getElementsByClassName('timer-text')[0],
-    playBtn: document.getElementsByClassName('play-btn')[0],
-    pauseBtn: document.getElementsByClassName('pause-btn')[0],
-    resetBtn: document.getElementsByClassName('reset-btn')[0],
-    incrBtns: [].concat(_toConsumableArray(document.getElementsByClassName('incr-button')))
-  });
+  window.timer = { setup: setup };
 })();
