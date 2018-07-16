@@ -36,7 +36,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     return new Date().getTime();
   };
 
-  var formatTime = function formatTime(t) {
+  var formatTime = function formatTime(t, format) {
     var sign = t >= 0 ? '' : '-';
     var tt = Math.abs(t);
     var milliseconds = t % 1000;
@@ -49,15 +49,20 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     var m = padLeft(minutes.toFixed(0), 2);
     var s = padLeft(seconds.toFixed(0), 2);
     var ms = padLeft(milliseconds.toFixed(0), 3);
-    return '' + sign + h + ':' + m + ':' + s;
+    switch (format) {
+      case 'mm:ss':
+        return '' + sign + m + ':' + s;
+      default:
+        return '' + sign + h + ':' + m + ':' + s;
+    }
   };
 
   var updateState = function updateState(state, update) {
     return save(Object.assign({}, state, update));
   };
 
-  var renderTimeEl = function renderTimeEl(state) {
-    return formatTime(timeToTarget(state));
+  var renderTimeEl = function renderTimeEl(state, format) {
+    return formatTime(timeToTarget(state), format);
   };
 
   var play = function play(state) {
@@ -99,6 +104,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
   var setup = function setup(_ref) {
     var root = _ref.root,
+      format = _ref.format,
       enableLocalStorage = _ref.enableLocalStorage || false,
       onTick = _ref.onTick,
       timerText = _ref.timerText,
@@ -165,8 +171,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       });
     }
 
-    var loop = function loop() {
-      timerText.innerHTML = renderTimeEl(state);
+    var loop = function () {
+      timerText.innerHTML = renderTimeEl(state, format);
       root.classList.toggle('expired', isExpired(state));
       root.classList.toggle('near-expiration', isNearExpiration(state));
       root.classList.toggle('playing', state.playing === true);

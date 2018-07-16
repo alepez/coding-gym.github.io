@@ -7,7 +7,6 @@
     var i = 0;
 
     var t = setInterval(function () {
-      console.log(bg[i]);
       ++i;
       $('body').css('background-color', bg[i % 2]);
       if (i > 11) {
@@ -18,15 +17,14 @@
 
   var setupTimer = function (o) {
     var $timer = o.$timer;
-    var target = o.target;
-    var onTick = o.onTick;
 
     timer.setup({
       root: $timer[0],
       timerText: $timer.find('.timer-text')[0],
-      target: target,
+      target: o.target,
       playing: true,
-      onTick: onTick
+      format: o.format,
+      onTick: o.onTick
     });
   };
 
@@ -40,9 +38,12 @@
     }
 
     var startTime = event.startTime;
+    var stopTime = event.startTime + (event.duration * 1000);
     var $challenges = $ctx.find('.challenge');
     var $beforeStart = $ctx.find('.before-start');
     var $afterStart = $ctx.find('.after-start');
+    var $duringSession = $ctx.find('.during-session');
+    var $afterStop = $ctx.find('.after-stop');
     var $startTimer = $ctx.find('.timer-start');
 
     $ctx.find('.location-btn')
@@ -63,8 +64,11 @@
 
     var eventTick = function (state) {
       var eventStarted = startTime <= new Date().getTime();
-      $afterStart.toggle(eventStarted === true);
+      var eventStopped = stopTime <= new Date().getTime();
       $beforeStart.toggle(eventStarted === false);
+      $duringSession.toggle(eventStarted === true && eventStopped === false);
+      $afterStart.toggle(eventStarted === true);
+      $afterStop.toggle(eventStopped === true);
     };
 
     $challenges.each(function (i) {
@@ -95,11 +99,11 @@
       setupTimer({
         $timer: $codingTimer,
         target: challengeTime + minutes(30),
+        format: 'mm:ss',
         onTick: function (state) {
           var diff = state.targetTime - new Date().getTime();
 
           if (!$codingTimer.hasClass('old') && -2000 < diff && diff < 0) {
-            console.log(diff);
             playAlarm();
           }
 
@@ -115,11 +119,11 @@
       setupTimer({
         $timer: $retrospectiveTimer,
         target: challengeTime + minutes(40),
+        format: 'mm:ss',
         onTick: function (state) {
           var diff = state.targetTime - new Date().getTime();
 
           if (!$codingTimer.hasClass('old') && -2000 < diff && diff < 0) {
-            console.log(diff);
             playAlarm();
           }
 
@@ -139,7 +143,6 @@
     var json = JSON.stringify(data);
     var base64 = btoa(json);
     var url = window.location.href.substr(0, window.location.href.lastIndexOf('#') + 1) + base64;
-    console.log(url);
     return base64;
   };
 

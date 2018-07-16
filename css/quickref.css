@@ -60,3 +60,9 @@
 .quickref-container .challenge .timer.future {
   visibility: hidden;
 }
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
