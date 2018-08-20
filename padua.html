@@ -7,7 +7,14 @@
 <body>
   <script>
     window.location = '/quickref/#' + btoa(JSON.stringify({
-      "challenges": [{
+      title: "Padua September 2018",
+      startTime: Date.parse('2018-09-19 19:00:00 UTC'), // TODO Not sure about portability
+      duration: 7200,
+      registration: {
+        name: "Eventbrite",
+        url: "https://www.eventbrite.it/e/biglietti-coding-gym-settembre-2018-programmers-in-padua-49258654963",
+      },
+      _challenges: [{
           url: "https://www.hackerrank.com/contests/coding-gym-pd0618/challenges/mars-exploration",
           title: "Mars Exploration"
         }, {
@@ -19,17 +26,10 @@
         }
       ],
       locale: 'it-IT',
-      startTime: Date.parse('2018-06-20 19:00:00 UTC'), // TODO Not sure about portability
-      duration: 7200,
-      registration: {
-        name: "Eventbrite",
-        url: "https://www.eventbrite.it/e/biglietti-coding-gym-giugno-programmers-in-padua-46692461409",
-      },
       location: {
         name: "Talent Lab",
         url: "https://goo.gl/maps/taAYzvEUux72"
-      },
-      title: "Padua June 2018"
+      }
     }));
 
   </script>
