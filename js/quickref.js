@@ -72,7 +72,8 @@
     };
 
     $challenges.each(function (i) {
-      var challenge = event.challenges[i];
+      var defaultChallenge = { url: '#', name: 'TODO' };
+      var challenge = (event.challenges && event.challenges[i] ) || defaultChallenge;
 
       var $challenge = $(this);
       var $title = $challenge.find('h3');
