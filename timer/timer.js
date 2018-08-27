@@ -44,16 +44,21 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     var seconds = tt % 60;
     tt = (tt - seconds) / 60;
     var minutes = tt % 60;
-    var hours = (tt - minutes) / 60;
+    tt = (tt - minutes) / 60;
+    var hours = tt % 24;
+    tt = (tt - hours) / 24;
+    var days = tt;
+
+    var d = days !== 0 ? days + ' ' + (days === 1 ? 'day' : 'days') + ', ' : '';
     var h = padLeft(hours.toFixed(0), 2);
     var m = padLeft(minutes.toFixed(0), 2);
     var s = padLeft(seconds.toFixed(0), 2);
     var ms = padLeft(milliseconds.toFixed(0), 3);
     switch (format) {
       case 'mm:ss':
-        return '' + sign + m + ':' + s;
+        return '' + sign + d + m + ':' + s;
       default:
-        return '' + sign + h + ':' + m + ':' + s;
+        return '' + sign + d + h + ':' + m + ':' + s;
     }
   };
 
